@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # App
 
 To start your Phoenix server:
@@ -19,3 +20,7 @@ OR:
 
 
 `make`
+=======
+# todo-list
+Todo List in Elixir
+>>>>>>> b454d6de163fd65869aaf9693a0f250e09948509
