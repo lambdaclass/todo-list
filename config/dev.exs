@@ -1,10 +1,10 @@
 use Mix.Config
 
 # Configure your database
-config :app, App.Repo,
+config :todo_list, TodoList.Repo,
   username: "postgres",
   password: "postgres",
-  database: "app_dev",
+  database: "todo_list_dev",
   hostname: "localhost",
   show_sensitive_data_on_connection_error: true,
   pool_size: 10
@@ -15,7 +15,7 @@ config :app, App.Repo,
 # The watchers configuration can be used to run external
 # watchers to your application. For example, we use it
 # with webpack to recompile .js and .css sources.
-config :app, AppWeb.Endpoint,
+config :todo_list, TodoListWeb.Endpoint,
   http: [port: 4000],
   debug_errors: true,
   code_reloader: true,
@@ -55,13 +55,13 @@ config :app, AppWeb.Endpoint,
 # different ports.
 
 # Watch static and templates for browser reloading.
-config :app, AppWeb.Endpoint,
+config :todo_list, TodoListWeb.Endpoint,
   live_reload: [
     patterns: [
       ~r"priv/static/.*(js|css|png|jpeg|jpg|gif|svg)$",
       ~r"priv/gettext/.*(po)$",
-      ~r"lib/app_web/(live|views)/.*(ex)$",
-      ~r"lib/app_web/templates/.*(eex)$"
+      ~r"lib/todo_list_web/(live|views)/.*(ex)$",
+      ~r"lib/todo_list_web/templates/.*(eex)$"
     ]
   ]
 

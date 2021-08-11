@@ -1,9 +1,9 @@
-defmodule App.MixProject do
+defmodule TodoList.MixProject do
   use Mix.Project
 
   def project do
     [
-      app: :app,
+      app: :todo_list,
       version: "0.1.0",
       elixir: "~> 1.7",
       elixirc_paths: elixirc_paths(Mix.env()),
@@ -19,7 +19,7 @@ defmodule App.MixProject do
   # Type `mix help compile.app` for more information.
   def application do
     [
-      mod: {App.Application, []},
+      mod: {TodoList.Application, []},
       extra_applications: [:logger, :runtime_tools]
     ]
   end
@@ -37,6 +37,8 @@ defmodule App.MixProject do
       {:phoenix_ecto, "~> 4.1"},
       {:ecto_sql, "~> 3.4"},
       {:postgrex, ">= 0.0.0"},
+      {:phoenix_live_view, "~> 0.15.1"},
+      {:floki, ">= 0.30.0", only: :test},
       {:phoenix_html, "~> 2.11"},
       {:phoenix_live_reload, "~> 1.2", only: :dev},
       {:phoenix_live_dashboard, "~> 0.4"},
